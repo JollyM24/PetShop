@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #50953a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.controller.MainController">
+   <children>
+      <Pane fx:id="zap" layoutX="435.0" layoutY="198.0" prefHeight="324.0" prefWidth="410.0">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="293.0" prefWidth="394.0" style="-fx-background-color: #3b6e2b;">
+               <children>
+                  <Label layoutX="117.0" layoutY="14.0" text="Запуск Spring" textAlignment="CENTER" textFill="#ddded7">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="55.0" layoutY="62.0" text="Обычно это занимает 30 секунд" textAlignment="CENTER" textFill="#ddded7">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="122.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/loader.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+      <Pane fx:id="at" layoutX="482.0" layoutY="113.0" prefHeight="495.0" prefWidth="316.0" visible="false">
+         <children>
+            <ImageView fitHeight="157.0" fitWidth="200.0" layoutX="58.0" layoutY="14.0">
+               <image>
+                  <Image url="@../images/logo.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="28.0" layoutY="171.0" prefHeight="293.0" prefWidth="261.0" style="-fx-background-color: #3b6e2b;">
+               <children>
+                  <Label layoutX="53.0" layoutY="27.0" text="Авторизация" textAlignment="CENTER" textFill="#ddded7">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="61.0" layoutY="86.0" prefHeight="2.0" prefWidth="140.0" style="-fx-background-color: #ddded7;" />
+                  <TextField fx:id="l_log" layoutX="58.0" layoutY="122.0" promptText="Логин" />
+                  <PasswordField fx:id="l_par" layoutX="58.0" layoutY="173.0" promptText="Пароль" />
+                  <Button layoutX="58.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#log_in" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #ea7e5d; -fx-background-radius: 5;" text="Войти" textFill="#f7f7f7">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="40.0" layoutY="470.0">
+               <children>
+                  <Label text="Нет аккаунта?" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="130.0" onMouseClicked="#reg" text="Регистрация!" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="rg" layoutX="482.0" layoutY="113.0" prefHeight="511.0" prefWidth="316.0" style="-fx-background-color: #50953a;" styleClass="root" stylesheets="@../css/root.css" visible="false">
+         <children>
+            <ImageView fitHeight="157.0" fitWidth="200.0" layoutX="59.0" layoutY="14.0">
+               <image>
+                  <Image url="@../images/logo.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="28.0" layoutY="171.0" prefHeight="304.0" prefWidth="261.0" style="-fx-background-color: #3b6e2b;">
+               <children>
+                  <Label layoutX="59.0" layoutY="27.0" text="Регистрация" textAlignment="CENTER" textFill="#ddded7">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="67.0" layoutY="84.0" prefHeight="2.0" prefWidth="132.0" style="-fx-background-color: #ddded7;" />
+                  <TextField fx:id="r_log" layoutX="58.0" layoutY="122.0" promptText="Логин" />
+                  <PasswordField fx:id="r_par" layoutX="58.0" layoutY="164.0" promptText="Пароль" />
+                  <PasswordField fx:id="r_cpar" layoutX="58.0" layoutY="207.0" promptText="Повторите пароль" />
+                  <Button layoutX="58.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#signup" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #ea7e5d; -fx-background-radius: 5;" text="Зарегистрировать" textFill="#f7f7f7">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="41.0" layoutY="487.0">
+               <children>
+                  <Label text="Есть аккаунт?" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="122.0" onMouseClicked="#auth" text="Авторизация!" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <Pane fx:id="errorparlog" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="469.0" layoutY="273.0" prefHeight="174.0" prefWidth="342.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="94.0" layoutY="26.0" text="Ошибка" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="75.0" text="Неверный логин или пароль">
+                     <font>
+                        <Font name="Georgia" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="138.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#unvispl" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ea7e5d;" text="OK" textFill="#f8f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="errorconfpar" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="469.0" layoutY="273.0" prefHeight="174.0" prefWidth="342.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="94.0" layoutY="26.0" text="Ошибка" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="75.0" text="Повторите пароль правильно">
+                     <font>
+                        <Font name="Georgia" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="137.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#unvispovpar" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ea7e5d;" text="OK" textFill="#f8f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="errorzanlog" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="460.0" layoutY="273.0" prefHeight="174.0" prefWidth="360.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="103.0" layoutY="26.0" text="Ошибка" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="75.0" text="Данный логин занят или запрещён">
+                     <font>
+                        <Font name="Georgia" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="146.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#unvislogzan" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ea7e5d;" text="OK" textFill="#f8f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="erroremptfd" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="469.0" layoutY="273.0" prefHeight="174.0" prefWidth="342.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="94.0" layoutY="26.0" text="Ошибка" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="75.0" text="Поля не должны быть пустыми!">
+                     <font>
+                        <Font name="Georgia" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="137.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#unvisemptfd" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ea7e5d;" text="OK" textFill="#f8f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="zareg" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="469.0" layoutY="263.0" prefHeight="194.0" prefWidth="342.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="116.0" layoutY="26.0" text="Успех" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="75.0" prefHeight="51.0" prefWidth="316.0" text="Поздравляю! Вы успешно зарегистрированы!" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Georgia" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="137.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#zaregok" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ea7e5d;" text="OK" textFill="#f8f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

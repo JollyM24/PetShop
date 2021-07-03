@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.controller.BaseController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+          <top>
+              <Pane prefHeight="46.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                  <children>
+                      <Label layoutX="61.0" layoutY="5.0" prefHeight="36.0" prefWidth="165.0" text="Лапы и Хвост" textFill="#215e2e">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Label>
+                  <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo_mini.png" />
+                     </image>
+                  </ImageView>
+                  </children>
+              </Pane>
+          </top>
+          <left>
+              <Pane prefHeight="354.0" prefWidth="136.0" style="-fx-background-color: #3b6e2b;" BorderPane.alignment="CENTER">
+                  <children>
+                      <VBox prefHeight="117.0" prefWidth="136.0">
+                          <children>
+                              <Button id="home" fx:id="glbut" mnemonicParsing="false" onMouseClicked="#setgl" prefHeight="24.0" prefWidth="136.0" style="-fx-background-color: #3b6e2b;" text="Главная" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                              <Button id="catalog" fx:id="catbut" mnemonicParsing="false" onMouseClicked="#setcat" prefHeight="35.0" prefWidth="136.0" style="-fx-background-color: #3b6e2b;" text="Каталог" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                              <Button id="account" fx:id="accbut" mnemonicParsing="false" onMouseClicked="#setacc" prefHeight="30.0" prefWidth="136.0" style="-fx-background-color: #3b6e2b;" text="Аккаунт" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                          </children>
+                      </VBox>
+                  </children>
+              </Pane>
+          </left>
+         <center>
+            <ScrollPane fx:id="scrpane" fitToWidth="true" maxHeight="-Infinity" prefWidth="1144.0" BorderPane.alignment="CENTER">
+               <content>
+                  <Pane maxHeight="1.7976931348623157E308">
+                     <children>
+                        <Pane fx:id="glav" prefHeight="674.0" prefWidth="1144.0" style="-fx-background-color: #fdfff0;" visible="false">
+                           <children>
+                              <Label layoutX="452.0" layoutY="22.0" text="Главная" textFill="#8b221c">
+                                 <font>
+                                    <Font name="Georgia Bold Italic" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="178.0" fitWidth="225.0" layoutX="431.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/corgi.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="71.0" layoutY="270.0" prefHeight="95.0" prefWidth="933.0" text="Интернет-магазин зоотоваров &quot;Лапы и Хвост&quot; предлагает широкий ассортимент кормов, аксессуаров и средств для ухода хозяевам кошек, собак, грызунов и экзотических питомцев. Наш интернет-магазин кормов и товаров для домашних животных позволит вам выбрать и купить продукцию отечественных и зарубежных производителей, которая поможет вам обеспечить питомца профессиональным уходом." textAlignment="CENTER" wrapText="true" />
+                              <Label layoutX="71.0" layoutY="531.0" text="Адрес: 643928, Тверская область, город Коломна, проезд Ломоносова, 56">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="56.0" layoutY="353.0" prefHeight="90.0" prefWidth="966.0" text="Если вы не можете определиться с выбором или найти желаемую продукцию в каталоге, не переживайте! Наши операторы с радостью ответят на все возникшие вопросы." textAlignment="CENTER" wrapText="true" />
+                              <Label layoutX="427.0" layoutY="430.0" text="Наши контакты" textFill="#dd3939">
+                                 <font>
+                                    <Font name="Georgia Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="71.0" layoutY="471.0" text="Телефон горячей линии: +7 (555) 555-55-55">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="71.0" layoutY="502.0" text="E-mail: lapyhwost@mail.ru">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="catal" maxWidth="-Infinity" prefWidth="1144.0" style="-fx-background-color: #fdfff0;">
+                           <children>
+                              <Label layoutX="446.0" layoutY="14.0" text="Каталог" textFill="#8b221c">
+                                 <font>
+                                    <Font name="Georgia Bold Italic" size="35.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b221c" height="35.0" layoutX="32.0" layoutY="62.0" stroke="#5ebf8300" strokeType="INSIDE" width="1000.0" />
+                              <Label layoutX="49.0" layoutY="61.0" text="Еда" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="26.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="108.0" layoutY="138.0" prefHeight="265.0" prefWidth="878.0" spacing="10.0">
+                                 <children>
+                                    <VBox prefHeight="251.0" prefWidth="212.0" spacing="5.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/food1.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="56.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для собак" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="254.0" prefWidth="212.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/food2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="51.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для котов" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="251.0" prefWidth="212.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/food3.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="56.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для грызунов" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="251.0" prefWidth="212.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/food4.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="56.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для рыб" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="108.0" layoutY="480.0" prefHeight="265.0" prefWidth="878.0" spacing="10.0">
+                                 <children>
+                                    <VBox prefHeight="251.0" prefWidth="212.0" spacing="5.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/lak1.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="56.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для собак" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="254.0" prefWidth="212.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/lak2.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="51.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для котов" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="251.0" prefWidth="212.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/lak3.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="56.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для грызунов" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="251.0" prefWidth="212.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="212.0">
+                                             <image>
+                                                <Image url="@../images/lak4.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane prefHeight="56.0" prefWidth="212.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Корм для рыб" />
+                                                <Label layoutX="14.0" layoutY="25.0" text="50 руб" textFill="#f24040" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="ak" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="674.0" prefWidth="1144.0" style="-fx-background-color: #ffffff;" visible="false">
+                           <children>
+                              <Label layoutX="452.0" layoutY="22.0" text="Аккаунт" textFill="#8b221c">
+                                 <font>
+                                    <Font name="Georgia Bold Italic" size="35.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="145.0" layoutY="101.0" prefHeight="412.0" prefWidth="809.0" style="-fx-background-color: #f3f4ef;">
+                                 <children>
+                                    <ImageView fitHeight="165.0" fitWidth="165.0" layoutX="60.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="285.0" layoutY="58.0" text="Имя" textFill="#24402c">
+                                       <font>
+                                          <Font name="Georgia Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="278.0" layoutY="100.0" prefHeight="35.0" prefWidth="400.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <Label id="log" fx:id="ac_log" layoutX="14.0" layoutY="7.0" text="log" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="285.0" layoutY="158.0" prefHeight="29.0" prefWidth="103.0" text="Пароль" textFill="#24402c">
+                                       <font>
+                                          <Font name="Georgia Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="278.0" layoutY="200.0" prefHeight="35.0" prefWidth="400.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <Label id="par" fx:id="ac_par" layoutX="14.0" layoutY="7.0" text="par" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="285.0" layoutY="258.0" text="ID" textFill="#24402c">
+                                       <font>
+                                          <Font name="Georgia Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="278.0" layoutY="300.0" prefHeight="35.0" prefWidth="400.0" style="-fx-background-color: #E1E4D8;">
+                                       <children>
+                                          <Label id="id" fx:id="ac_id" layoutX="14.0" layoutY="7.0" text="id" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                              <Button layoutX="1032.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#exitd" style="-fx-background-color: #ea7e5d;" text="Выйти" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+      <Pane fx:id="error404" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="469.0" layoutY="273.0" prefHeight="174.0" prefWidth="342.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="94.0" layoutY="14.0" text="Ошибка" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="55.0" prefHeight="70.0" prefWidth="298.0" text="Произошла непредвиденная ошибка. Пожалуйста авторизируйтесь повторно." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Georgia Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="137.0" layoutY="129.0" mnemonicParsing="false" onMouseClicked="#unvis404" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ea7e5d;" text="OK" textFill="#f8f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="vyh" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="491.0" layoutY="262.0" prefHeight="197.0" prefWidth="298.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="18.0" layoutY="58.0" prefHeight="54.0" prefWidth="263.0" text="Вы действительно хотите выйти?" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Georgia Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="14.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#vyhida" prefHeight="62.0" prefWidth="116.0" style="-fx-background-color: #ea7e5d;" text="Абсолютно точно, вам меня не переубедить" textFill="#f8f8f8" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="176.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#vyhino" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #ea7e5d;" text="Ну, я ещё подумаю..." textFill="#f8f8f8" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="45.0" layoutY="14.0" text="Внимание!" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="vyhda" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <Pane layoutX="469.0" layoutY="273.0" prefHeight="174.0" prefWidth="342.0" style="-fx-background-color: f0e1dd; -fx-background-radius: 20; -fx-border-color: #b52e2e; -fx-border-width: 4; -fx-border-radius: 15;">
+               <children>
+                  <Label layoutX="67.0" layoutY="14.0" text="Внимание!" textFill="#b52e2e">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="55.0" prefHeight="70.0" prefWidth="298.0" text="Надеемся, вы записали свой логин и пароль..." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Georgia Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="137.0" layoutY="129.0" mnemonicParsing="false" onMouseClicked="#unvisvyhda" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #ea7e5d;" text="Да!" textFill="#f8f8f8">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>
